@@ -56,8 +56,8 @@ async function createAccountFunc(event: MouseEvent) {
     const responePost = await fetch(baseurl, init);
     const dataFromPost = await responePost.json();
     setTimeout(() => {
-        alert('Welcome')
-        location.href = "/index.html";
+        alert('Welcome New user!, Log in again')
+        window.location.assign('index.html');
        }, 5000);
  
 }
@@ -91,7 +91,7 @@ function verifyinProcess(data: Record<string, any>) {
             const userData = { ...listFromData[i], id: keysFromData[i] };
             console.log(userData);
             localStorage.setItem('currentUser', JSON.stringify(userData));
-            location.href = "/userpage.html";
+            window.location.assign('userpage.html');
             userFound = true;
         }
     }

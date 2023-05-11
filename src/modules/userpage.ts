@@ -83,7 +83,7 @@ deleteAccountBtn.addEventListener('click',()=>{
   .then (setTimeout(() => {
    alert('Hope to see you here soon again')
    localStorage.clear();
-   location.href = "./index.html";
+   window.location.assign('index.html');
   }, 5000));
 });
 
